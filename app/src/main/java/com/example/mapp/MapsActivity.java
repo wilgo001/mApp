@@ -55,5 +55,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(new MarkerOptions().position(mmi).title("bat mmi"));
         mMap.addMarker(new MarkerOptions().position(tc).title("bat tc"));
         mMap.addMarker(new MarkerOptions().position(gb).title("bat gb"));
+        //bite
     }
 }
