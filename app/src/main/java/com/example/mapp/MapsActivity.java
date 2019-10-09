@@ -88,6 +88,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } catch (Exception e) {
             Uri markeUri = Uri.parse("market://details?id=com.google.zxing.client.android");
             Intent marketIntent = new Intent(Intent.ACTION_VIEW, markeUri);
+            startActivity(marketIntent);
 
         }
     }
@@ -101,7 +102,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 Log.e("scanner", infoDansQRCode);
 
                 for (Balise balise : balises) {
-                    if (infoDansQRCode == balise.labelQRCode) {
+                    if (infoDansQRCode.equals(balise.labelQRCode)) {
+                        Log.e("Balise confirmée : ", infoDansQRCode);
                         balise.validerBalise();
                     }
                 }
